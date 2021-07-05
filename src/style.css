@@ -1,0 +1,88 @@
+#consent-axkeg5u7 {
+    display: block;
+    position: fixed;
+    width: 375px;
+    min-height: 150px;
+    z-index: 999;
+    border-radius: 10px;
+}
+
+.consent-axkeg5u7-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.consent-axkeg5u7-theme {
+    background-color: #333838;
+    color: white;
+}
+
+#consent-axkeg5u7-text {
+    font-family: 'Helvetica';
+    font-size: 1em;
+    padding: 1em;
+}
+
+.consent-axkeg5u7-position-bottom-left {
+    bottom: 1em;
+    left: 1em;
+}
+
+.consent-axkeg5u7-position-bottom-right {
+    bottom: 1em;
+    right: 1em;
+}
+
+#consent-axkeg5u7-text-link {
+    text-decoration: none;
+}
+
+.consent-axkeg5u7-theme #consent-axkeg5u7-text-link {
+    color: #b0bec5;
+}
+
+.consent-axkeg5u7-theme #consent-axkeg5u7-text-link:hover {
+    color: #78909c;
+}
+
+#consent-axkeg5u7-button {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0.3em;
+}
+
+#consent-axkeg5u7-button button {
+    width: 45%;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 0.2em;
+    text-align: center;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    border: 0;
+}
+
+.consent-axkeg5u7-theme #consent-axkeg5u7-button button {
+    background-color: #282d2d;
+    color: white;
+}
+
+.consent-axkeg5u7-theme #consent-axkeg5u7-button button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="consent-axkeg5u7-position-"] {
+      width: 100% !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      top: auto !important;
+    }
+
+    #consent-axkeg5u7 {
+        border-radius: 10px 10px 0px 0px !important;
+    }
+  }

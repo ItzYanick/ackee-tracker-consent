@@ -2,7 +2,8 @@
 
 # ackee-tracker-consent
 A script that creates a Consent banner to activate detailed tracking on Ackee. Just include it on your site to track and you are good to go!
-
+<br />
+![Consent Banner](https://raw.githubusercontent.com/ItzYanick/ackee-tracker-consent/main/exampleScreenshot.png)
 </div>
 
 ## 📖 Table of Content
@@ -12,7 +13,7 @@ A script that creates a Consent banner to activate detailed tracking on Ackee. J
 
 ## 🚀 Installation
 ```html
-<script src="dist/ackee-tracker-consent.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ackee-tracker-consent@1.0.0/dist/ackee-tracker-consent.min.js"></script>
 
 <script>
     AckeeTrackerOptIn.consent('https://ackee.example.com', 'hd11f820-68a1-11e6-8047-79c0c2d9bce0')

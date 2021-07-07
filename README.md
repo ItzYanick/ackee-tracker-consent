@@ -18,7 +18,7 @@ A script that creates a Consent banner to activate detailed tracking on Ackee. J
 
 ## 🚀 Installation
 ```html
-<script src="https://cdn.jsdelivr.net/npm/ackee-tracker-consent@1.1.0/dist/ackee-tracker-consent.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ackee-tracker-consent@1.1.1/dist/ackee-tracker-consent.min.js"></script>
 
 <script>
     AckeeTrackerOptIn.consent('https://ackee.example.com', 'hd11f820-68a1-11e6-8047-79c0c2d9bce0')

@@ -3,7 +3,10 @@
 # ackee-tracker-consent
 A script that creates a Consent banner to activate detailed tracking on Ackee. Just include it on your site to track and you are good to go!
 <br />
+<br />
 ![Consent Banner](https://raw.githubusercontent.com/ItzYanick/ackee-tracker-consent/main/exampleScreenshot.png)
+<br />
+<br />
 </div>
 
 [![Node.js Package](https://github.com/ItzYanick/ackee-tracker-consent/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ItzYanick/ackee-tracker-consent/actions/workflows/npm-publish.yml)

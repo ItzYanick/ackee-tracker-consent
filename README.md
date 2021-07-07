@@ -6,6 +6,8 @@ A script that creates a Consent banner to activate detailed tracking on Ackee. J
 ![Consent Banner](https://raw.githubusercontent.com/ItzYanick/ackee-tracker-consent/main/exampleScreenshot.png)
 </div>
 
+[![Node.js Package](https://github.com/ItzYanick/ackee-tracker-consent/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ItzYanick/ackee-tracker-consent/actions/workflows/npm-publish.yml)
+
 ## 📖 Table of Content
 - [🚀 Installation](#-installation)
 - [⚙️ API](#-api)

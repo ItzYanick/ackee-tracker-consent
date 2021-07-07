@@ -13,9 +13,15 @@
       document.cookie = 'consent-axkeg5u7=; Max-Age=0; path=/';
       window.location.reload(true);
     }
+    window.onload = () => {
+      document.getElementById("output").innerHTML += "Current Status: " + AckeeTrackerOptIn.getConsentStatus() + "<br />";
+    }
   </script>
   <button type="button" onclick='deleteCookieAndReload()'>Delete Ackee Cookie</button>
 
+  <div id="output">
+
+  </div>
   <script src="ackee-tracker-consent.min.js"></script>
   <script>
     AckeeTrackerOptIn.consent("https://ackee.yanick.gay/", "b2432607-e26a-4946-9466-02ed035910c3")

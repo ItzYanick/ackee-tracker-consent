@@ -91,6 +91,22 @@ Parameters:
 
 - `shouldDeleteComponent` `{?Boolean}` Should delete the consent banner component from the site. This is a internal-only variable and is only being used for the buttons in the banner itself. Therefore the `shouldDeleteComponent` property defaults to `false`
 
+### .getConsentStatus()
+
+Gets the current Consent Status
+
+Examples:
+
+```js
+if(AckeeTrackerOptIn.getConsentStatus()) {
+    console.log(true)
+}
+```
+
+Returns:
+
+- `{Boolean}` Returns `true` when the user accepted the detailed tracking
+
 ## 🔧 Options
 
 The option-object can include the following properties:

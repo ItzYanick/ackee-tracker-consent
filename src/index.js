@@ -26,7 +26,7 @@ function startTracker() {
         stopTracker()
     }
 
-    if (getCookie("consent-axkeg5u7") == "true") {
+    if (getConsentStatus() === true) {
         currentTracker = ackeeTracker.create(globalServerAddress, { detailed: true }).record(globalDomainId);
     } else {
         currentTracker = ackeeTracker.create(globalServerAddress).record(globalDomainId);
@@ -75,8 +75,13 @@ function optOut(shouldDeleteComponent = false) {
     }
 }
 
+function getConsentStatus() {
+    return (getCookie("consent-axkeg5u7") === 'true');
+}
+
 export {
     consent,
     optIn,
-    optOut
+    optOut,
+    getConsentStatus
 };

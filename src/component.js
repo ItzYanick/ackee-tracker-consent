@@ -4,7 +4,6 @@ function getComponent(globalOptions) {
     const elementMain = document.createElement("div");
 
     elementMain.id = "consent-axkeg5u7";
-    elementMain.classList.add("consent-axkeg5u7-theme");
     if(globalOptions.shadow) {
         elementMain.classList.add("consent-axkeg5u7-shadow");
     }

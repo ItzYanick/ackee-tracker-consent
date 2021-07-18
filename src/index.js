@@ -1,4 +1,4 @@
-import * as ackeeTracker from "ackee-tracker";
+import { create } from "ackee-tracker";
 import { getCookie, setCookie } from "./cookie.js";
 import { createComponent, deleteComponent } from "./component.js";
 
@@ -27,9 +27,9 @@ function startTracker() {
     }
 
     if (getConsentStatus() === true) {
-        currentTracker = ackeeTracker.create(globalServerAddress, { detailed: true }).record(globalDomainId);
+        currentTracker = create(globalServerAddress, { detailed: true }).record(globalDomainId);
     } else {
-        currentTracker = ackeeTracker.create(globalServerAddress).record(globalDomainId);
+        currentTracker = create(globalServerAddress).record(globalDomainId);
     }
     trackerRunning = true;
 }

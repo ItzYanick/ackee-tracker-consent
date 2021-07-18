@@ -44,7 +44,7 @@ function getComponent(globalOptions) {
 
 function createComponent(globalOptions) {
     if (!componentCreated) {
-        require("./style.css");
+        require("./style.min.css");
 
         document.body.appendChild(getComponent(globalOptions));
 

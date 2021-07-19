@@ -1,5 +1,4 @@
 import { create } from "ackee-tracker";
-import { getCookie, setCookie } from "./cookie.js";
 import { createComponent, deleteComponent } from "./component.js";
 import { identifier } from "./constants.js";
 
@@ -45,22 +44,36 @@ function stopTracker() {
     }
 }
 
+function addDays(date, days) {
+    var result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+}
+
 //Export Functions
 function consent(serverAddress, domainId, options = {}) {
     globalServerAddress = serverAddress;
     globalDomainId = domainId;
     globalOptions = Object.assign({}, defaultOptions, options);
 
-    if (getCookie(identifier) != "") {
-        startTracker();
+    if (localStorage.getItem(identifier) != null) {
+        const savedTime = new Date(parseInt(localStorage.getItem(identifier + "-time")));
+        if (savedTime > new Date()) {
+            startTracker();
+        } else {
+            localStorage.removeItem('consent-axkeg5u7');
+            createComponent(globalOptions);
+            startTracker();
+        }
     } else {
         createComponent(globalOptions);
         startTracker();
     }
+    localStorage.setItem(identifier + "-time", addDays(new Date(), 31).getTime())
 }
 
 function optIn(shouldDeleteComponent = false) {
-    setCookie(identifier, true, 31);
+    localStorage.setItem(identifier, true);
     startTracker();
     if (shouldDeleteComponent) {
         deleteComponent();
@@ -68,7 +81,7 @@ function optIn(shouldDeleteComponent = false) {
 }
 
 function optOut(shouldDeleteComponent = false) {
-    setCookie(identifier, false, 31);
+    localStorage.setItem(identifier, false);
     startTracker();
 
     if (shouldDeleteComponent) {
@@ -77,7 +90,7 @@ function optOut(shouldDeleteComponent = false) {
 }
 
 function getConsentStatus() {
-    return (getCookie(identifier) === 'true');
+    return (localStorage.getItem(identifier) === 'true');
 }
 
 export {

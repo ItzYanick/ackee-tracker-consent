@@ -1,27 +1,28 @@
+import { identifier } from "./constants";
 var componentCreated = false;
 
 function getComponent(globalOptions) {
     const elementMain = document.createElement("div");
 
-    elementMain.id = "consent-axkeg5u7";
+    elementMain.id = identifier;
     if(globalOptions.shadow) {
-        elementMain.classList.add("consent-axkeg5u7-shadow");
+        elementMain.classList.add(identifier + "-shadow");
     }
-    elementMain.classList.add("consent-axkeg5u7-position-" + globalOptions.position);
+    elementMain.classList.add(identifier + "-position-" + globalOptions.position);
 
     const elementMainText = document.createElement("div");
-    elementMainText.id = "consent-axkeg5u7-text";
+    elementMainText.id = identifier + "-text";
     elementMainText.innerHTML = globalOptions.text + "<br />";
 
     const elementMainTextLink = document.createElement("a");
-    elementMainTextLink.id = "consent-axkeg5u7-text-link";
+    elementMainTextLink.id = identifier + "-text-link";
     elementMainTextLink.href = globalOptions.moreInformationLink;
     elementMainTextLink.target = "_blank";
     elementMainTextLink.rel = "noopener noreferrer";
     elementMainTextLink.innerHTML = globalOptions.moreInformationLabel + "<br />";
 
     const elementMainButton = document.createElement("div");
-    elementMainButton.id = "consent-axkeg5u7-button";
+    elementMainButton.id = identifier + "-button";
 
     const elementMainAcceptButton = document.createElement("button");
     elementMainAcceptButton.onclick = function() { AckeeTrackerOptIn.optIn(true) };
@@ -55,7 +56,7 @@ function createComponent(globalOptions) {
 
 function deleteComponent() {
     if (componentCreated) {
-        const component = document.getElementById("consent-axkeg5u7")
+        const component = document.getElementById(identifier)
         component.parentElement.removeChild(component);
         componentCreated = false;
     } else {

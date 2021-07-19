@@ -1,6 +1,7 @@
 import { create } from "ackee-tracker";
 import { getCookie, setCookie } from "./cookie.js";
 import { createComponent, deleteComponent } from "./component.js";
+import { identifier } from "./constants.js";
 
 var currentTracker = null;
 var trackerRunning = false;
@@ -50,7 +51,7 @@ function consent(serverAddress, domainId, options = {}) {
     globalDomainId = domainId;
     globalOptions = Object.assign({}, defaultOptions, options);
 
-    if (getCookie("consent-axkeg5u7") != "") {
+    if (getCookie(identifier) != "") {
         startTracker();
     } else {
         createComponent(globalOptions);
@@ -59,7 +60,7 @@ function consent(serverAddress, domainId, options = {}) {
 }
 
 function optIn(shouldDeleteComponent = false) {
-    setCookie("consent-axkeg5u7", true, 31);
+    setCookie(identifier, true, 31);
     startTracker();
     if (shouldDeleteComponent) {
         deleteComponent();
@@ -67,7 +68,7 @@ function optIn(shouldDeleteComponent = false) {
 }
 
 function optOut(shouldDeleteComponent = false) {
-    setCookie("consent-axkeg5u7", false, 31);
+    setCookie(identifier, false, 31);
     startTracker();
 
     if (shouldDeleteComponent) {
@@ -76,7 +77,7 @@ function optOut(shouldDeleteComponent = false) {
 }
 
 function getConsentStatus() {
-    return (getCookie("consent-axkeg5u7") === 'true');
+    return (getCookie(identifier) === 'true');
 }
 
 export {

@@ -11,6 +11,7 @@ A script that creates a Consent banner to activate detailed tracking on Ackee. J
 
 [![NPM build & publish](https://github.com/ItzYanick/ackee-tracker-consent/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ItzYanick/ackee-tracker-consent/actions/workflows/npm-publish.yml)
 [![npm version](https://badge.fury.io/js/ackee-tracker-consent.svg)](https://badge.fury.io/js/ackee-tracker-consent)
+[![jsdelivr cdn hits](https://data.jsdelivr.com/v1/package/npm/ackee-tracker-consent/badge)](https://www.jsdelivr.com/package/npm/ackee-tracker-consent)
 
 ## 📖 Table of Content
 - [🚀 Installation](#-installation)

@@ -15,10 +15,12 @@ const defaultOptions = {
     rejectButtonLabel: 'Reject',
     moreInformationLabel: 'More Information',
     moreInformationLink: "https://docs.ackee.electerious.com/#/docs/Anonymization",
-
     shadow: false,
     // Possible Positions: bottom-left, bottom-right
-    position: 'bottom-left'
+    position: 'bottom-left',
+    // ackee-tracker options
+	ignoreLocalhost: true,
+	ignoreOwnVisits: true
 };
 
 function startTracker() {
@@ -26,11 +28,12 @@ function startTracker() {
         stopTracker()
     }
 
-    if (getConsentStatus() === true) {
-        currentTracker = create(globalServerAddress, { detailed: true }).record(globalDomainId);
-    } else {
-        currentTracker = create(globalServerAddress).record(globalDomainId);
-    }
+    currentTracker = create(globalServerAddress, {
+        detailed: getConsentStatus(),
+        ignoreLocalhost: globalOptions.ignoreLocalhost,
+        ignoreOwnVisits: globalOptions.ignoreOwnVisits
+    }).record(globalDomainId);
+
     trackerRunning = true;
 }
 

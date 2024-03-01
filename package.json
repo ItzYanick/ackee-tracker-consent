@@ -1,6 +1,6 @@
 {
   "name": "ackee-tracker-consent",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A consent banner to activate detailed tracking on Ackee",
   "main": "dist/ackee-tracker-consent.min.js",
   "module": "src/index.js",

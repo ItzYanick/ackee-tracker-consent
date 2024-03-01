@@ -19,8 +19,8 @@ const defaultOptions = {
     // Possible Positions: bottom-left, bottom-right
     position: 'bottom-left',
     // ackee-tracker options
-	ignoreLocalhost: true,
-	ignoreOwnVisits: true
+    ignoreLocalhost: true,
+    ignoreOwnVisits: true
 };
 
 function startTracker() {
